@@ -1,16 +1,89 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="style.css" rel="stylesheet" type="text/css" />
+  <title>Flexbox Example</title>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
-</body>
+ <p> Welcome to ScienceMathEdu!</p>
+  <div class="flex-container">
 
+    
+    <div class="flex-item" onclick="window.location.href='/chess';"">Chess</div>
+
+    
+     <div class="flex-item" onclick="window.location.href='/blackholesquare';"">Black Hole Square</div>
+
+
+    <div class="flex-item" onclick="window.location.href='/play1';"">Fireboy and Watergirl</div>
+
+
+    <div class="flex-item" onclick="window.location.href='/play2';"">Fireboy and Watergirl 2</div>
+
+
+    <div class="flex-item" onclick="window.location.href='/play3';"">Fireboy and Watergirl 3</div>
+
+
+
+    <div class="flex-item" onclick="window.location.href='/play4';"">Fireboy and Watergirl 4</div>
+    
+    
+    
+</div>
+
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+  <p>An Evan Yadegari Production</p>
+</footer>
+
+
+
+
+
+
+</footer>
+
+<div class="search-container">
+  <input type="text" placeholder="Search.." name="search" id="search-bar">
+  <button type="button" onclick="searchGames()">Search</button>
+</div>
+
+<script>
+function searchGames() {
+  let searchQuery = document.getElementById("search-bar").value.toLowerCase();
+  let gameItems = document.getElementsByClassName("flex-item");
+  
+  for (let i = 0; i < gameItems.length; i++) {
+    let gameTitle = gameItems[i].innerText.toLowerCase();
+    if (!gameTitle.includes(searchQuery)) {
+      gameItems[i].style.display = "none";
+    } else {
+      gameItems[i].style.display = "block";
+    }
+  }
+}
+</script>
+
+<script src="sg.min.js"></script>
+
+
+
+
+
+
